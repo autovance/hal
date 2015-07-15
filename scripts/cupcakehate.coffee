@@ -12,5 +12,5 @@ module.exports = (robot) ->
     "Seriously?"
   ]
 
-  robot.respond /why do you hate cupcakes/, (res) ->
+  robot.respond /(.*)(why do you hate cupcakes)(.*)/, (res) ->
     res.send res.random ireallyhatecupcakes
