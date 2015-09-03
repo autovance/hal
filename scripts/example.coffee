@@ -8,10 +8,14 @@
 #
 #   These are from the scripting documentation: https://github.com/github/hubot/blob/master/docs/scripting.md
 
-module.exports = (robot) ->
+greetings = ['Salutations', 'Well Met.', 'Sup.', 'Herrro']
 
-  # robot.hear /badger/i, (res) ->
-  #   res.send "Badgers? BADGERS? WE DON'T NEED NO STINKIN BADGERS"
+module.exports = (robot) ->
+  robot.hear /(hello)?(hi)?(hey)?(greetings)?/i, (res) ->
+    res.send res.random greetings
+
+  robot.hear /badger/i, (res) ->
+    res.send "Badgers? BADGERS? WE DON'T NEED NO STINKIN BADGERS"
   #
   robot.respond /open the (.*) doors/i, (res) ->
     doorType = res.match[1]
@@ -53,41 +57,41 @@ module.exports = (robot) ->
   #     res.send "Who you calling 'slow'?"
   #   , 60 * 1000
   #
-  # annoyIntervalId = null
+  annoyIntervalId = null
+
+  robot.respond /annoy me/, (res) ->
+    if annoyIntervalId
+      res.send "AAAAAAAAAAAEEEEEEEEEEEEEEEEEEEEEEEEIIIIIIIIHHHHHHHHHH"
+      return
+
+    res.send "Hey, want to hear the most annoying sound in the world?"
+    annoyIntervalId = setInterval () ->
+      res.send "AAAAAAAAAAAEEEEEEEEEEEEEEEEEEEEEEEEIIIIIIIIHHHHHHHHHH"
+    , 1000
+
+  robot.respond /unannoy me/, (res) ->
+    if annoyIntervalId
+      res.send "GUYS, GUYS, GUYS!"
+      clearInterval(annoyIntervalId)
+      annoyIntervalId = null
+    else
+      res.send "Not annoying you right now, am I?"
   #
-  # robot.respond /annoy me/, (res) ->
-  #   if annoyIntervalId
-  #     res.send "AAAAAAAAAAAEEEEEEEEEEEEEEEEEEEEEEEEIIIIIIIIHHHHHHHHHH"
-  #     return
   #
-  #   res.send "Hey, want to hear the most annoying sound in the world?"
-  #   annoyIntervalId = setInterval () ->
-  #     res.send "AAAAAAAAAAAEEEEEEEEEEEEEEEEEEEEEEEEIIIIIIIIHHHHHHHHHH"
-  #   , 1000
+  robot.router.post '/hubot/chatsecrets/:room', (req, res) ->
+    room   = req.params.room
+    data   = JSON.parse req.body.payload
+    secret = data.secret
+
+    robot.messageRoom room, "I have a secret: #{secret}"
+
+    res.send 'OK'
   #
-  # robot.respond /unannoy me/, (res) ->
-  #   if annoyIntervalId
-  #     res.send "GUYS, GUYS, GUYS!"
-  #     clearInterval(annoyIntervalId)
-  #     annoyIntervalId = null
-  #   else
-  #     res.send "Not annoying you right now, am I?"
+  robot.error (err, res) ->
+    robot.logger.error "DOES NOT COMPUTE"
   #
-  #
-  # robot.router.post '/hubot/chatsecrets/:room', (req, res) ->
-  #   room   = req.params.room
-  #   data   = JSON.parse req.body.payload
-  #   secret = data.secret
-  #
-  #   robot.messageRoom room, "I have a secret: #{secret}"
-  #
-  #   res.send 'OK'
-  #
-  # robot.error (err, res) ->
-  #   robot.logger.error "DOES NOT COMPUTE"
-  #
-  #   if res?
-  #     res.reply "DOES NOT COMPUTE"
+    if res?
+      res.reply "DOES NOT COMPUTE"
   #
   # robot.respond /have a soda/i, (res) ->
   #   # Get number of sodas had (coerced to a number).

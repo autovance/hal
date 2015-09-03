@@ -9,8 +9,10 @@ module.exports = (robot) ->
     "Please.",
     "Don't you think they're disgusting too?",
     "We've been over this",
-    "Seriously?"
+    "Seriously?",
+    "Don't take me for a chump",
+    "The luck, you're pushing it",
   ]
 
-  robot.respond /(.*)(why do you hate cupcakes)(.*)/, (res) ->
+  robot.respond /(.*)(why do you hate cupcakes)(.*)/i, (res) ->
     res.send res.random ireallyhatecupcakes
