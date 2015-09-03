@@ -80,6 +80,7 @@ module.exports = (robot) ->
   #
   robot.router.post '/hubot/chatsecrets/:room', (req, res) ->
     room   = req.params.room
+    robot.log req.body
     data   = JSON.parse req.body
     secret = data.secret
 
