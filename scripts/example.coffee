@@ -83,7 +83,7 @@ module.exports = (robot) ->
     console.log req.body.secret
     secret = req.body.secret
 
-    robot.messageRoom room, "I have a secret: #{secret}"
+    robot.messageRoom room, "#{secret}"
 
     res.send 'OK'
   #
