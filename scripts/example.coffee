@@ -11,7 +11,7 @@
 greetings = ['Salutations', 'Well Met.', 'Sup.', 'Herrro']
 
 module.exports = (robot) ->
-  robot.hear /(hello)?(hi)?(hey)?(greetings)?/i, (res) ->
+  robot.hear /((hello) | (hi) | (hey) | (greetings))/i, (res) ->
     res.send res.random greetings
 
   robot.hear /badger/i, (res) ->
