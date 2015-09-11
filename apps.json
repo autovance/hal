@@ -1,0 +1,28 @@
+{
+  "desk": {
+    "provider": "heroku",
+    "repository": "autovance/",
+    "environments": ["staging", "blue"],
+    "required_contexts": ["ci/circle"],
+    "heroku_staging_name": "autovance-desk-staging",
+    "heroku_blue_name": "autovance-desk-blue"
+  },
+
+  "admin": {
+    "provider": "heroku",
+    "repository": "autovance/",
+    "environments": ["staging", "blue"],
+    "required_contexts": ["ci/circle"],
+    "heroku_staging_name": "autovance-admin-staging",
+    "heroku_blue_name": "autovance-admin-blue"
+  },
+
+  "api": {
+    "provider": "heroku",
+    "repository": "autovance/",
+    "environments": ["staging", "blue"],
+    "required_contexts": ["ci/circle"],
+    "heroku_staging_name": "autovance-api-staging",
+    "heroku_blue_name": "autovance-api-blue"
+  }
+}
