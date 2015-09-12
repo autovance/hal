@@ -20,7 +20,7 @@
     "hubot-scripts": "^2.16.1",
     "hubot-shipit": "^0.2.0",
     "hubot-slack": "^3.3.0",
-    "hubot-stalk": "https://github.com/forstermatth/hubot-stalk"
+    "hubot-stalk": "git+https://github.com/forstermatth/hubot-stalk.git"
   },
   "engines": {
     "node": "0.10.x"
