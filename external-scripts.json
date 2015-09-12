@@ -10,4 +10,6 @@
   "hubot-rules",
   "hubot-shipit",
   "hubot-deploy",
-  "hubot-plusplus"]
+  "hubot-plusplus",
+  "hubot-stalk"
+]
