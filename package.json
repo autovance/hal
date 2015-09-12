@@ -1,6 +1,6 @@
 {
   "name": "hal",
-  "version": "0.0.0",
+  "version": "0.0.0-awesome",
   "private": true,
   "author": "Matt Forster <forster.matth@gmail.com>",
   "description": "Heuristically Programmed Algorithmic Computer",
