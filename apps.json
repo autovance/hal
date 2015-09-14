@@ -27,6 +27,6 @@
     "provider": "heroku",
     "repository": "autovance/data-service",
     "environments": ["staging"],
-    "heroku_staging_name": "autovance-api-staging"
+    "heroku_staging_name": "autovance-data-service-staging"
   }
 }
