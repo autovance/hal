@@ -21,5 +21,12 @@
     "environments": ["staging", "blue"],
     "heroku_staging_name": "autovance-api-staging",
     "heroku_blue_name": "autovance-api-blue"
+  },
+  
+  "data-service": {
+    "provider": "heroku",
+    "repository": "autovance/data-service",
+    "environments": ["staging"],
+    "heroku_staging_name": "autovance-api-staging"
   }
 }
