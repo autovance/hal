@@ -11,5 +11,6 @@
   "hubot-shipit",
   "hubot-deploy",
   "hubot-plusplus",
-  "hubot-stalk"
+  "hubot-stalk",
+  "hubot-announce"
 ]
