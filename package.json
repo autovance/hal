@@ -24,6 +24,6 @@
     "hubot-stalk": "^1.1.1"
   },
   "engines": {
-    "node": "0.10.x"
+    "node": "v4"
   }
 }
