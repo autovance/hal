@@ -8,7 +8,7 @@
 #
 #   These are from the scripting documentation: https://github.com/github/hubot/blob/master/docs/scripting.md
 
-greetings = ['Salutations', 'Well Met.', 'Sup.', 'Herrro']
+greetings = ['Salutations', 'Well Met.', 'Sup.', 'Hello']
 
 module.exports = (robot) ->
   robot.hear /((hello) | (hi) | (hey) | (greetings))/i, (res) ->
