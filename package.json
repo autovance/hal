@@ -21,7 +21,9 @@
     "hubot-scripts": "^2.16.1",
     "hubot-shipit": "^0.2.0",
     "hubot-slack": "^3.3.0",
-    "hubot-stalk": "^1.1.1"
+    "hubot-stalk": "^1.1.1",
+    "node-uuid": "^1.4.8",
+    "request": "^2.81.0"
   },
   "engines": {
     "node": "v4"
