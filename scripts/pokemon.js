@@ -15,7 +15,7 @@ module.exports = function (robot) {
   const oNeLat = '49.736724218985294';
   const oNeLng = '-112.79844424138639';
 
-  const eids = [10, 11, 13, 14, 16, 17, 18, 19, 20, 21, 22, 23, 29, 30, 32, 33, 41, 42, 46, 48, 49, 50, 51, 52, 56, 74, 75, 77, 81, 96, 100, 111, 161, 163, 167, 168, 177, 198, 209, 220];
+  const eids = [];
 
   robot.hear(/^(pokemon on)|(pkmn on)$/i, res => {
     res.send('Starting pokemon notifications');
