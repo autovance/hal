@@ -1,31 +1,30 @@
 {
   "name": "hal",
-  "version": "0.0.0-awesome",
+  "version": "1.0.0",
   "private": true,
   "author": "Matt Forster <forster.matth@gmail.com>",
   "description": "Heuristically Programmed Algorithmic Computer",
   "dependencies": {
-    "hubot": "^2.13.2",
-    "hubot-announce": "https://github.com/forstermatth/hubot-announce",
-    "hubot-deploy": "^0.6.53",
-    "hubot-diagnostics": "0.0.1",
-    "hubot-google-images": "^0.2.1",
-    "hubot-google-translate": "^0.2.0",
-    "hubot-help": "^0.1.1",
-    "hubot-heroku-keepalive": "1.0.0",
-    "hubot-maps": "0.0.2",
-    "hubot-plusplus": "^1.1.5",
-    "hubot-pugme": "^0.1.0",
-    "hubot-redis-brain": "0.0.3",
-    "hubot-rules": "^0.1.1",
-    "hubot-scripts": "^2.16.1",
-    "hubot-shipit": "^0.2.0",
-    "hubot-slack": "^3.3.0",
+    "hubot": "^3.3.0",
+    "hubot-deploy": "^0.13.27",
+    "hubot-diagnostics": "1.0.0",
+    "hubot-google-images": "^0.2.7",
+    "hubot-google-translate": "^0.2.1",
+    "hubot-help": "^1.0.1",
+    "hubot-heroku-keepalive": "1.0.3",
+    "hubot-maps": "0.0.3",
+    "hubot-plusplus": "^1.4.0",
+    "hubot-pugme": "^0.1.1",
+    "hubot-redis-brain": "1.0.0",
+    "hubot-rules": "^1.0.0",
+    "hubot-scripts": "^2.17.2",
+    "hubot-shipit": "^0.2.1",
+    "hubot-slack": "^4.6.0",
     "hubot-stalk": "^1.1.1",
     "node-uuid": "^1.4.8",
-    "request": "^2.81.0"
+    "request": "^2.88.0"
   },
   "engines": {
-    "node": "v6"
+    "node": "v10"
   }
 }

@@ -1,0 +1,12 @@
+# Lines starting with '#' are comments.
+# Each line is a file pattern followed by one or more owners.
+# Order is important. The last matching pattern has the most precedence.
+
+# Default Owners
+*       @autovance/developers
+
+# File Owners
+scripts/cupcakehate.coffee @forstermatth
+scripts/example.coffee @forstermatth @kobayashik
+scripts/pokemon.js @trs
+lib/newversion.js @forstermatth
